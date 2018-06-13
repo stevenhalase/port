@@ -7,11 +7,13 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { AppComponent } from './app.component';
 import { SkillSelectorComponent } from './components/skillselector/skillselector.component';
 import { SkillsService } from './services/skills/skills.service';
+import { SelectedSkillComponent } from './components/selectedskill/selectedskill.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillSelectorComponent
+    SkillSelectorComponent,
+    SelectedSkillComponent
   ],
   imports: [
     BrowserModule,

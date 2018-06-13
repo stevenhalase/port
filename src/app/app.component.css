@@ -1,5 +1,20 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
+
 .app-skillselector {
-  width: 50vw;
+  flex: 0 0 50%;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+}
+
+.app-selectedskill {
+  flex: 0 0 50%;
   height: 100vh;
   overflow-y: auto;
   display: flex;

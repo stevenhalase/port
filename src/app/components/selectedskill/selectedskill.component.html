@@ -1,0 +1,39 @@
+<div class="selectedskill-container">
+  <div *ngIf="skill === null" class="selectedskill-noselection">
+    <span>Please select a skill to view details.</span>
+  </div>
+  <div *ngIf="skill !== null" class="selectedskill-skill-container">
+      <div class="selectedskill-skill-header">
+        <div class="selectedskill-skill-image">
+          <svg-icon 
+            src="../../assets/{{ skill.image }}" 
+            *ngIf="skill.image !== null" 
+            [svgStyle]="{ 'width.px':60, 'height.px':60 }"></svg-icon>
+          <span 
+            class="selectedskill-skill-name--logo" 
+            *ngIf="skill.image === null">{{ skill.name }}</span>
+        </div>
+        <div class="selectedskill-skill-name">
+          <span>{{ skill.name }}</span>
+        </div>
+      </div>
+      <div *ngIf="skill.projects && skill.projects.length > 0" class="selectedskill-skill-projects">
+        <div class="selectedskill-skill-projects-title">
+          <span>Projects</span>
+        </div>
+        <div *ngFor="let project of skill.projects" class="selectedskill-skill-project">
+          <div class="selectedskill-skill-project-name">
+            <span>{{ project.name }}</span>
+          </div>
+          <div class="selectedskill-skill-project-description">
+            <span>{{ project.description }}</span>
+          </div>
+          <div *ngIf="project.tags && project.tags.length > 0" class="selectedskill-skill-project-tags">
+            <div *ngFor="let tag of project.tags" class="selectedskill-skill-project-tag">
+              <span>{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>>

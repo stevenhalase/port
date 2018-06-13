@@ -1,0 +1,124 @@
+.selectedskill-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.selectedskill-noselection {
+  color: #d2dae2;
+  font-size: 12px;
+}
+
+.selectedskill-skill-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.selectedskill-skill-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.selectedskill-skill-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808e9b;
+  padding: 5px;
+}
+
+.selectedskill-skill-name--logo {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  color: #d2dae2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedskill-skill-name {
+  background-color: #808e9b;
+  color: #1e272e;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.selectedskill-skill-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #242e35;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.selectedskill-skill-projects-title {
+  padding: 5px 10px;
+  width: 100%;
+  background-color: #1b2125;
+  color: #d2dae2;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.selectedskill-skill-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #485460;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.selectedskill-skill-project-name {
+  background-color: #808e9b;
+  color: #1e272e;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.selectedskill-skill-project-tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.selectedskill-skill-project-tag {
+  background-color: #808e9b;
+  color: #1e272e;
+  font-size: 9px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.selectedskill-skill-project-description {
+  padding: 15px;
+  font-size: 14px;
+  color: #d2dae2;
+}

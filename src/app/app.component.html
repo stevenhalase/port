@@ -1,4 +1,5 @@
-<div>
-  <app-skillselector class="app-skillselector"></app-skillselector>
+<div class="app">
+  <app-skillselector class="app-skillselector" (skillSelected)="onSkillSelected($event)" [skills]="skills"></app-skillselector>
+  <app-selectedskill class="app-selectedskill" [skill]="selectedSkill"></app-selectedskill>
 </div>
 

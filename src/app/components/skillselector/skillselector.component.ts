@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Skills } from '../../utilities/skills';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { SkillsService } from './../../services/skills/skills.service';
+import { Skills } from '../../utilities/skills';
+import { Skill } from '../../utilities/skill';
 
 @Component({
   selector: 'app-skillselector',
@@ -9,13 +10,16 @@ import { SkillsService } from './../../services/skills/skills.service';
 })
 export class SkillSelectorComponent implements OnInit {
 
-  public skills: Skills;
+  @Input() skills: Skills;
+  @Output() skillSelected: EventEmitter<Skill> = new EventEmitter<Skill>();
 
-  constructor(private skillsService: SkillsService) {
-    this.skills = skillsService.getSkills();
-  }
+  constructor() { }
 
   ngOnInit() {
+  }
+
+  selectSkill(skill: Skill) {
+    this.skillSelected.emit(skill);
   }
 
 }
