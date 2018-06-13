@@ -1,0 +1,126 @@
+.skillselector-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.skillselector-container-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillselector-parentskill {
+  color: #d2dae2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.skillselector-parentskill-name {
+  padding: 5px 10px;
+  width: 100%;
+  background-color: #1b2125;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.skillselector-skills-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #242e35;
+  padding: 10px;
+  width: 100%;
+}
+
+.skillselector-childskill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 5px 5px;
+  margin: 5px;
+  position: relative;
+  width: 100%;
+  transition: all .25s ease-in-out;
+}
+
+.skillselector-childskill-container {
+  color: #d2dae2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: #485460;
+  padding: 5px;
+  position: relative;
+  pointer-events: none;
+}
+
+.skillselector-childskill-name {
+  background-color: #808e9b;
+  color: #1e272e;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: calc(100% - 10px);
+  padding: 0 10px;
+  opacity: 0;
+  transition: all .25s ease-in-out;
+  pointer-events: none;
+}
+
+.skillselector-childskill:hover .skillselector-childskill-name {
+  opacity: 1;
+  padding: 5px 10px;
+  transition: all .25s ease-in-out;
+}
+
+.skillselector-childskill-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808e9b;
+  padding: 5px;
+}
+
+.skillselector-childskill-image-margin {
+  margin-right: 10px;
+}
+
+.skillselector-subskill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808e9b;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.skillselector-subskill-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillselector-subskill-name--logo {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}

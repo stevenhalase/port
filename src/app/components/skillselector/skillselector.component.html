@@ -1,0 +1,40 @@
+<div class="skillselector-container">
+  <div class="skillselector-container-inner">
+      <div *ngFor="let skill of skills.skills" class="skillselector-parentskill">
+          <div class="skillselector-parentskill-name">
+            <span>{{ skill.name.toUpperCase() }}</span>
+          </div>
+          
+          <div class="skillselector-skills-container">
+            <div 
+              *ngFor="let childSkill of skill.childSkills" 
+              class="skillselector-childskill">
+    
+              <div class="skillselector-childskill-name">
+                <span>{{ childSkill.name }}</span>
+              </div>
+              <div class="skillselector-childskill-container">
+                <svg-icon 
+                  [ngClass]="{'skillselector-childskill-image': true, 'skillselector-childskill-image-margin': childSkill.childSkills && childSkill.childSkills.length > 0}" 
+                  src="../../assets/{{ childSkill.image }}" 
+                  [svgStyle]="{ 'width.px':60, 'height.px':60 }"></svg-icon>
+                <div 
+                  *ngFor="let subSkill of childSkill.childSkills" 
+                  class="skillselector-subskill">
+                  <svg-icon 
+                    class="skillselector-subskill-image"
+                    *ngIf="subSkill.image !== null" 
+                    src="../../assets/{{ subSkill.image }}" 
+                    [svgStyle]="{ 'width.px':40, 'height.px':40 }"></svg-icon>
+                  <span 
+                    class="skillselector-subskill-name--logo" 
+                    *ngIf="subSkill.image === null">{{ subSkill.name }}</span>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+          
+      </div>
+  </div>
+</div>
