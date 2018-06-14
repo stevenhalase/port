@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { SkillSelectorComponent } from './components/skillselector/skillselector.component';
 import { SkillsService } from './services/skills/skills.service';
 import { SelectedSkillComponent } from './components/selectedskill/selectedskill.component';
+import { HeroCardComponent } from './components/herocard/herocard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillSelectorComponent,
-    SelectedSkillComponent
+    SelectedSkillComponent,
+    HeroCardComponent
   ],
   imports: [
     BrowserModule,

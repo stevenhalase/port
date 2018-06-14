@@ -1,5 +1,10 @@
 <div class="app">
-  <app-skillselector class="app-skillselector" (skillSelected)="onSkillSelected($event)" [skills]="skills"></app-skillselector>
-  <app-selectedskill class="app-selectedskill" [skill]="selectedSkill"></app-selectedskill>
+  <div class="herocard-container">
+    <app-herocard class="app-herocard"></app-herocard>
+  </div>
+  <div class="skills-container">
+    <app-skillselector class="app-skillselector" (skillSelected)="onSkillSelected($event)" [skills]="skills"></app-skillselector>
+    <app-selectedskill id="app-selectedskill" class="app-selectedskill" [skill]="selectedSkill"></app-selectedskill>
+  </div>
 </div>
 

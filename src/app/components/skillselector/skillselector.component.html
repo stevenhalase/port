@@ -15,15 +15,15 @@
               </div>
               <div class="skillselector-childskill-container">
                 <div
-                  [ngClass]="{'skillselector-childskill-image': true, 'skillselector-childskill-image-margin': childSkill.childSkills && childSkill.childSkills.length > 0}"
+                  [ngClass]="{'skillselector-childskill-image': true, 'skillselector-childskill-image-margin': childSkill.childSkills && childSkill.childSkills.length > 0, 'selected-skill': childSkill == selectedSkill}"
                   (click)="selectSkill(childSkill)">
                   <svg-icon 
                     src="../../assets/{{ childSkill.image }}" 
                     [svgStyle]="{ 'width.px':60, 'height.px':60 }"></svg-icon>
                 </div>
                 <div 
-                  *ngFor="let subSkill of childSkill.childSkills" 
-                  class="skillselector-subskill"
+                  *ngFor="let subSkill of childSkill.childSkills"
+                  [ngClass]="{'skillselector-subskill': true, 'selected-skill': subSkill == selectedSkill}"
                   (click)="selectSkill(subSkill)">
                   <svg-icon 
                     class="skillselector-subskill-image"

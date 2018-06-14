@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { Skill } from '../../utilities/skill';
 
 @Component({
@@ -6,12 +6,17 @@ import { Skill } from '../../utilities/skill';
   templateUrl: './selectedskill.component.html',
   styleUrls: ['./selectedskill.component.css']
 })
-export class SelectedSkillComponent implements OnInit {
+export class SelectedSkillComponent implements OnChanges, OnInit {
 
   @Input() skill: Skill;
 
   constructor() { }
 
   ngOnInit() { }
+
+  ngOnChanges() {
+    const container = document.getElementById('app-selectedskill');
+    container.scrollTop = 0;
+  }
 
 }

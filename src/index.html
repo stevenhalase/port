@@ -2,13 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Port</title>
+  <title>Steven Halase Enhanced Portfolio</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="og:url" content="http://www.halasedesign.net">
+  <meta name="og:image" content="http://www.halasedesign.net/assets/responsive.png">
+  <meta name="og:image:secureurl" content="https://i.imgur.com/aGk2o2h.png">
+  <meta name="og:image:width" content="1910">
+  <meta name="og:image:height" content="1162">
+  <meta name="og:title" content="Steven Halase Enhanced Portfolio">
+  <meta name="og:description" content="Revamped portfolio website utilizing Angular 6.">
+  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body id="body">
   <app-root></app-root>
+  <script src="./assets/particles.min.js" type="text/javascript"></script>
+  <script>
+    particlesJS.load('body', './assets/particlesjs-config.json');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63930106-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-63930106-1');
+  </script>
 </body>
 </html>

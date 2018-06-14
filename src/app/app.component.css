@@ -1,21 +1,38 @@
 .app {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
   height: 100vh;
+}
+
+.herocard-container {
+  flex: 0 0 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-herocard {
+  flex: 0 0 100%;
+}
+
+.skills-container {
+  flex: 0 0 70%;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
 }
 
 .app-skillselector {
-  flex: 0 0 50%;
-  height: 100vh;
+  flex: 0 0 40%;
   overflow-y: auto;
-  display: flex;
 }
 
 .app-selectedskill {
-  flex: 0 0 50%;
-  height: 100vh;
+  flex: 0 0 60%;
   overflow-y: auto;
-  display: flex;
 }

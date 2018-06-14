@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { SkillsService } from './services/skills/skills.service';
 import { Skills } from './utilities/skills';
 import { Skill } from './utilities/skill';

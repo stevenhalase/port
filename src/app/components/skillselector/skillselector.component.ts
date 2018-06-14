@@ -13,12 +13,15 @@ export class SkillSelectorComponent implements OnInit {
   @Input() skills: Skills;
   @Output() skillSelected: EventEmitter<Skill> = new EventEmitter<Skill>();
 
+  selectedSkill: Skill;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   selectSkill(skill: Skill) {
+    this.selectedSkill = skill;
     this.skillSelected.emit(skill);
   }
 

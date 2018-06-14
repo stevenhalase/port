@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Skills } from '../../utilities/skills';
+import { eKnowledge } from '../../utilities/eknowledge';
 
 @Injectable({
   providedIn: 'root'
@@ -15,17 +16,34 @@ export class SkillsService {
           name: 'Front End Development',
           image: null,
           projects: null,
+          knowledge: eKnowledge.Expert,
           childSkills: [
             {
               name: 'HTML',
               image: 'html5.svg',
-              projects: null,
+              projects: [
+                {
+                  name: 'Various Web Applications',
+                  description: 'Developed elements for various web applications.',
+                  tags: ['Custom Elements'],
+                  link: null
+                }
+              ],
+              knowledge: eKnowledge.Expert,
               childSkills: null
             },
             {
               name: 'CSS',
               image: 'css3.svg',
-              projects: null,
+              projects: [
+                {
+                  name: 'Various Web Applications',
+                  description: 'Developed styling for various web applications.',
+                  tags: ['Flexbox', 'Animation'],
+                  link: null
+                }
+              ],
+              knowledge: eKnowledge.Proficient,
               childSkills: null
             },
             {
@@ -34,11 +52,12 @@ export class SkillsService {
               projects: [
                 {
                   name: 'Dynamics 365 Client Customizations',
-                  description: 'Developed Javascript/Typescript libraries to support heavy customizations for Dynamics 365 clients.',
+                  description: 'Developed Javascript / Typescript libraries to support heavy customizations for Dynamics 365 clients.',
                   tags: ['DOM Manipulation', 'Sync/Async Programming', 'Event Handling', 'ES6', 'Promises'],
                   link: null
                 }
               ],
+              knowledge: eKnowledge.Expert,
               childSkills: [
                 {
                   name: 'React',
@@ -55,8 +74,15 @@ export class SkillsService {
                       description: 'Developed viewer for Slack Archives to integrate within tab component of Microsoft Teams',
                       tags: ['Components', 'Services', 'Component Communication', 'ES6'],
                       link: null
-                    }
+                    },
+                    {
+                      name: 'Neighbor (WIP)',
+                      description: 'Currently building a community organizing and skill-sharing platform to help communities grow and become stronger.',
+                      tags: ['Components', 'Services', 'Component Communication', 'ES6'],
+                      link: null
+                    },
                   ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 },
                 {
@@ -76,12 +102,14 @@ export class SkillsService {
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 },
                 {
                   name: 'Vue',
                   image: 'vue.svg',
                   projects: null,
+                  knowledge: eKnowledge.WorkingKnowledge,
                   childSkills: null
                 }
               ]
@@ -92,11 +120,13 @@ export class SkillsService {
           name: 'Back End Development',
           image: null,
           projects: null,
+          knowledge: eKnowledge.Proficient,
           childSkills: [
             {
               name: 'JavaScript',
               image: 'js.svg',
               projects: null,
+              knowledge: eKnowledge.Proficient,
               childSkills: [
                 {
                   name: 'Node',
@@ -104,17 +134,18 @@ export class SkillsService {
                   projects: [
                     {
                       name: 'The Moving Company API',
-                      description: 'Developed Node/Express/MongoDB API service to process lead submissions from web application.',
+                      description: 'Developed Node / Express / MongoDB API service to process lead submissions from web application.',
                       tags: ['API', 'ORM'],
                       link: null
                     },
                     {
                       name: 'Comeeda API',
-                      description: 'Developed Node/Express/MongoDB API service to process users, pickup requests, deliveries and messaging for mobile application.',
+                      description: 'Developed Node / Express / MongoDB API service to process users, pickup requests, deliveries and messaging for mobile application.',
                       tags: ['SocketIO', 'API', 'ORM'],
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 },
                 {
@@ -123,17 +154,18 @@ export class SkillsService {
                   projects: [
                     {
                       name: 'The Moving Company API',
-                      description: 'Developed Node/Express/MongoDB API service to process lead submissions from web application.',
+                      description: 'Developed Node / Express / MongoDB API service to process lead submissions from web application.',
                       tags: ['API', 'ORM'],
                       link: null
                     },
                     {
                       name: 'Comeeda API',
-                      description: 'Developed Node/Express/MongoDB API service to process users, pickup requests, deliveries and messaging for mobile application.',
+                      description: 'Developed Node / Express / MongoDB API service to process users, pickup requests, deliveries and messaging for mobile application.',
                       tags: ['SocketIO', 'API', 'ORM'],
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 },
                 {
@@ -147,6 +179,7 @@ export class SkillsService {
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Familiar,
                   childSkills: null
                 },
               ]
@@ -155,6 +188,7 @@ export class SkillsService {
               name: 'C#',
               image: 'csharp.svg',
               projects: null,
+              knowledge: eKnowledge.Expert,
               childSkills: [
                 {
                   name: 'WebAPI',
@@ -173,6 +207,7 @@ export class SkillsService {
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Expert,
                   childSkills: null
                 },
                 {
@@ -192,6 +227,7 @@ export class SkillsService {
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Expert,
                   childSkills: null
                 },
               ]
@@ -200,11 +236,26 @@ export class SkillsService {
               name: 'PHP',
               image: 'php.svg',
               projects: null,
+              knowledge: eKnowledge.Proficient,
               childSkills: [
                 {
                   name: 'WordPress',
                   image: 'wordpress.svg',
-                  projects: null,
+                  projects: [
+                    {
+                      name: 'InWisconsin.com',
+                      description: 'Worked with development team to create custom plugins to provide custom elements for various visitor and admin facing components.',
+                      tags: ['Plugins'],
+                      link: null
+                    },
+                    {
+                      name: 'WEDC.org',
+                      description: 'Worked with development team to create custom plugins to provide custom elements for various visitor and admin facing components.',
+                      tags: ['Plugins'],
+                      link: null
+                    }
+                  ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 },
               ]
@@ -215,6 +266,7 @@ export class SkillsService {
           name: 'Database',
           image: null,
           projects: null,
+          knowledge: eKnowledge.Expert,
           childSkills: [
             {
               name: 'MongoDB',
@@ -222,23 +274,25 @@ export class SkillsService {
               projects: [
                 {
                   name: 'The Moving Company API',
-                  description: 'Developed Node/Express/MongoDB API service to process lead submissions from web application.',
+                  description: 'Developed Node / Express / MongoDB API service to process lead submissions from web application.',
                   tags: ['API', 'ORM'],
                   link: null
                 },
                 {
                   name: 'Comeeda API',
-                  description: 'Developed Node/Express/MongoDB API service to process users, pickup requests, deliveries and messaging for mobile application.',
+                  description: 'Developed Node / Express / MongoDB API service to process users, pickup requests, deliveries and messaging for mobile application.',
                   tags: ['SocketIO', 'API', 'ORM'],
                   link: null
                 }
               ],
+              knowledge: eKnowledge.Expert,
               childSkills: null
             },
             {
               name: 'CosmosDB',
               image: 'cosmosdb.svg',
               projects: null,
+              knowledge: eKnowledge.Familiar,
               childSkills: null
             },
             {
@@ -258,6 +312,7 @@ export class SkillsService {
                   link: null
                 }
               ],
+              knowledge: eKnowledge.Expert,
               childSkills: null
             },
           ]
@@ -266,11 +321,13 @@ export class SkillsService {
           name: 'Cloud',
           image: null,
           projects: null,
+          knowledge: eKnowledge.Proficient,
           childSkills: [
             {
               name: 'Azure',
               image: 'azure.svg',
               projects: null,
+              knowledge: eKnowledge.Proficient,
               childSkills: [
                 {
                   name: 'Functions',
@@ -283,6 +340,7 @@ export class SkillsService {
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 },
                 {
@@ -296,6 +354,7 @@ export class SkillsService {
                       link: null
                     }
                   ],
+                  knowledge: eKnowledge.Proficient,
                   childSkills: null
                 }
               ]
